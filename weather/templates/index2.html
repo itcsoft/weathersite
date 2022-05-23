@@ -38,7 +38,30 @@
           {{ Weather }}
 
           
-         
+          {{ my_city }} <br>
+          {{ my_country }}
+          {{ my_cities }} 
+
+          {% for i in my_cities %}
+            {{ i }} <br>
+          {% endfor %}
+
+          <ul>
+          {% for i in my_cities %}
+          <li>{{ i }}</li> <br>
+        {% endfor %}
+
+          
+        <ol>
+          {% for num in numbers %}
+            {% if num > 0 %}
+              <li>{{ num }}</li>
+            {% endif %}
+
+          {% endfor %}
+        </ol>
+
+      </ul>
       </div>
 
 
