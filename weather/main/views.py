@@ -24,7 +24,8 @@ def weather(request):
         # Temperature in city Osh: 295.51
         temp = f"Температура в городе {city_name.title()}: {data_dict['main']['temp'] }°C"
         # Condition of weather in city Osh: Rain
-        condition_weather = f"Прогноз погоды в городе {city_name.title()}: {data_dict['weather'][0]['main']}"
+        cond = translator.translate(data_dict['weather'][0]['main'], dest='ru').text
+        condition_weather = f"Прогноз погоды в городе {city_name.title()}: {cond}"
         # feels_like
         feels_like = f"Температура в городе {city_name.title()} ощущается как: {data_dict['main']['feels_like'] }°C"
         # temp_min
